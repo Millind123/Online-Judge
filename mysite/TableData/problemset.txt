@@ -1,0 +1,28 @@
+problem_text = "Find the largest number "
+problem_input[0]= "1 4 2 3 4 "
+problem_output[0]="4"
+
+problem_text = "Find the smallest number "
+problem_input[0]= "1 4 2 3 4 "
+problem_output[0]="1"
+
+
+problem_text = "Find the smallest even number "
+problem_input[0]= "1 4 2 3 4 "
+problem_output[0]="2"
+
+problem_text = "Find the largest even number "
+problem_input[0]= "1 4 2 3 4 "
+problem_output[0]="4"
+
+problem_text = "Find the largest odd number "
+problem_input[0]= "1 4 2 3 4 "
+problem_output[0]="3"
+
+
+
+============================================================
+
+q = Problem (problem_text = "Find the largest number ",problem_input= "1 4 2 3 4 ",problem_output="4",problem_number=1)
+
+r = Problem (problem_text = "Find the smallest number ",problem_input= "1 4 2 3 4 ",problem_output="1",problem_number=2)
