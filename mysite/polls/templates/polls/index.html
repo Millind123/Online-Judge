@@ -1,7 +1,7 @@
 {% if problemset %}
     <ul>
     {% for problem in problemset %}
-        <li><a href="/polls/{{ problem.problem_number}}/">{{ problem.problem_text }}</a></li>
+        <li><a href="/polls/{{ problem.problem_number}}/">{{ problem.problem_name}}</a></li>
     {% endfor %}
     </ul>
 {% else %}

@@ -6,7 +6,6 @@ problem_text = "Find the smallest number "
 problem_input[0]= "1 4 2 3 4 "
 problem_output[0]="1"
 
-
 problem_text = "Find the smallest even number "
 problem_input[0]= "1 4 2 3 4 "
 problem_output[0]="2"

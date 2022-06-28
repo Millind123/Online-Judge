@@ -1,15 +1,19 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Problems
+from .models import Problems,Inputs
 
 def problem_statement(request,number):    
     problemset = Problems.objects.all()
+    inputset = Inputs.objects.all()
     for p in problemset:
         if p.problem_number == number:
             problem=p
-    # problem=problemset[0]
+    for i in inputset:
+        if i.problem_id==number:
+            inputt=i
     context = {
-        'problem':problem
+        'problem':problem,
+        'inputt':inputt
     }
     return render(request, 'polls/problemStatement.html',context)
 
