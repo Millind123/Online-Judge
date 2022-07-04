@@ -11,7 +11,10 @@
     <p>
       OUTPUT ->  {{inputt.input_output}}
     </p>
-    <!-- <form action="/polls">
-        <input type="file" id="myFile" name="filename">
-        <input type="submit">
-    </form> -->
+
+    <form action="" method="post">
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Submit">
+     </form>
+  
