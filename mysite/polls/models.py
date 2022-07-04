@@ -1,6 +1,7 @@
 from django.db import models
+from django.utils import timezone as django_tz 
 
-# Create your models here.
+
 
 class Problems(models.Model):
     problem_text = models.CharField(max_length=20000)
@@ -21,6 +22,16 @@ class Inputs(models.Model):
     def return_self(self):
         return {self.input_text,self.input_output,self.problem_number}
 
+
+class Submission(models.Model):
+    submission_code = models.CharField(max_length=20000)
+    submission_verdict = models.CharField(max_length=20000)
+    submission_date = models.DateTimeField(default=django_tz.now)
+    submission_problemID = models.IntegerField()
+   
+
+    def __str__(self):
+        return self.submission_code
 
 
 
