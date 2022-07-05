@@ -1,0 +1,20 @@
+
+<!-- {{inputt.input_output}} -->
+    
+    <h1>{{problem.problem_number}}:{{problem.problem_name}}</h1>
+    <p>
+        {{problem.problem_text}}
+    </p>
+    <p>
+      INPUT -> {{inputt.input_text}}    
+    </p>
+    <p>
+      OUTPUT ->  {{inputt.input_output}}
+    </p>
+    <!-- <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data"> -->
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Submit">
+     </form>
+  
