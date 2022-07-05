@@ -24,14 +24,16 @@ class Inputs(models.Model):
 
 
 class Submission(models.Model):
-    submission_code = models.CharField(max_length=20000)
+    submission_code = models.FileField()
     submission_verdict = models.CharField(max_length=20000)
     submission_date = models.DateTimeField(default=django_tz.now)
     submission_problemID = models.IntegerField()
+    submission_ID = models.IntegerField()
+    username = models.CharField(max_length=100)
    
 
     def __str__(self):
-        return self.submission_code
+        return self.submission_verdict
 
 
 

@@ -1,4 +1,6 @@
-
+<div style="text-align: right;" >
+  <a  href="{% url 'logout' %}"> LOGOUT </a>
+</div>
 <!-- {{inputt.input_output}} -->
     
     <h1>{{problem.problem_number}}:{{problem.problem_name}}</h1>
@@ -11,8 +13,8 @@
     <p>
       OUTPUT ->  {{inputt.input_output}}
     </p>
-
-    <form action="" method="post">
+    <!-- <form role="form" class="form-horizontal" method="post" enctype="multipart/form-data"> -->
+    <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{form}}
       <input type="submit" value="Submit">
