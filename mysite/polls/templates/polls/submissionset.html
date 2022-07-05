@@ -1,0 +1,15 @@
+<div style="text-align: right;" >
+    <a  href="{% url 'logout' %}"> LOGOUT </a>
+</div>
+
+{% if submissionSet %}
+    <ul>
+    {% for sub in submissionSet %}
+        <li>{{sub.username}}->{{ sub.submission_date}}-> {{sub}}-> <a href = "/polls/submissionset/{{sub.submission_ID}}/"> view </a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+
+<!--  -->
