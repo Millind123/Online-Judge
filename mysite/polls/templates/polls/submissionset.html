@@ -1,9 +1,0 @@
-{% if submissionSet %}
-    <ul>
-    {% for sub in submissionSet %}
-        <li>{{ sub.submission_date}}-> {{sub}}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}
